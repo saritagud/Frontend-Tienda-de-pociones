@@ -1,6 +1,6 @@
 import Nav from "./Nav";
 import Modal from "./FormCrear";
-import Pociones from "./Pociones";
+import Potions from "./Potions";
 import Ingredients from "./Ingredients";
 import Footer from "./Footer";
 
@@ -8,21 +8,21 @@ import Footer from "./Footer";
 function Landing(){
 
     return(
-        <div className="">
+        <div className="bg-moradoClaro">
             <Nav/>
 
-            <section>
-                <h1>Encantamiento embotellado, tu dosis de maravillas</h1>
+            <section className=" flex flex-col justify-center text-center w-full h-[70vh] font-principal text-xl font-bold ">
+                <h1 className="m-5">Encantamientos embotellado, tu dosis de maravillas</h1>
                 <Modal/>
                 
-            </section>
-
-            <section>
+            </section >
+            <div className="border-t border-black m-4"></div>
+            <section className=" flex flex-col justify-center text-center w-full font-principal text-xl font-bold ">
                 <h1>Pociones</h1>
-                <Pociones/>
+                <Potions/>
             </section>
-
-            <section>
+            <div className="border-t border-black m-4"></div>
+            <section className=" flex flex-col justify-center text-center w-full  font-principal text-xl font-bold ">
                 <h1>Lista de Ingredientes</h1>
                 <Ingredients/>
             </section>

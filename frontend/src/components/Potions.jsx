@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { FaPencilAlt, FaTrash } from "react-icons/fa";
+import Editar from "./FormEditar";
+import Eliminar from "./ModalDelete";
 
 
-function Pociones(){
+function Potions(){
 
     const [potion, setPotion] = useState([]);
     
@@ -21,17 +22,17 @@ function Pociones(){
     });
     return(
         <div>
-            <FaPencilAlt/>
+            <Editar/>
+            <Eliminar/>
             {potion.map((potions)=>(
-                <ul key={potions.id}>
+                <ul className="rounded-lg" key={potions.id}>
                     <li key={potions.id}>{potions.name}</li>
                     <li key={potions.id}>{potions.description}</li>
                     <li key={potions.id}>{potions.price}</li>
                 </ul>
-            ))}
-            <FaTrash/>         
+            ))}        
         </div>
     )
 }
 
-export default Pociones;
+export default Potions;

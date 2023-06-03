@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import {FaWindowClose} from 'react-icons/fa'
+import {FaWindowClose, FaPencilAlt} from 'react-icons/fa'
 
-function Modal() {
+function Editar() {
   const [isOpen, setIsOpen] = useState(false);
   const [Name, setName] = useState('');
   const [Description, setDescription] = useState('');
@@ -50,8 +50,8 @@ function Modal() {
       ingredients: ingredientIds,
     };
 
-    fetch("http://localhost:3000/agregar", {
-      method: "POST",
+    fetch("http://localhost:3000/editar", {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -66,7 +66,7 @@ function Modal() {
   
   return (
     <div>
-      <button className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold m-5" onClick={() => setIsOpen(!isOpen)}>Crear Poción</button>
+      <FaPencilAlt className="text-azul text-2xl" onClick={() => setIsOpen(!isOpen)}/>
 
       {isOpen && (
         
@@ -120,7 +120,7 @@ function Modal() {
             name="numero"
           />
 
-          <button className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold w-[50%] flex justify-center m-5">Crear poción</button>
+          <button className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold w-[50%] flex justify-center m-5">Guardar</button>
             </div>
         </form>
       )}
@@ -128,4 +128,4 @@ function Modal() {
   );
 }
 
-export default Modal
+export default Editar

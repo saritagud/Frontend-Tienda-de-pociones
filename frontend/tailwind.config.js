@@ -3,9 +3,23 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-
+      colors: {
+        morado: "#BF05F2",
+        moradoAzul: "#6D3BD9",
+        azul: "#0F0140",
+        moradoClaro: "#B3A9D9",
+        crema: "#F2D8A7",
+      },
+      fontFamily: {
+        principal: ["Shadows Into Light", "cursive"],
+        Urbanist: ["Urbanist", "sans-serif"],
+        signikaNegative: ["Signika Negative", "sans-serif"]
+      },
       backgroundImage: {
-        principal: "url('./src/assets/fondo.png')"
+        principal: "url('./src/assets/fondo.png')",
+        principal2: "url('./src/assets/fondo2.png')",
+        pocion: "url('./src/assets/118ca44e80db5585737cc8028b95806e.jpg')",
+        fondo: "url('./src/assets/833f411a437e960c76483a83dccb653b.jpg')"
       },
       
       screens: {
