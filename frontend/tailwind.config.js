@@ -16,10 +16,12 @@ module.exports = {
         signikaNegative: ["Signika Negative", "sans-serif"]
       },
       backgroundImage: {
-        principal: "url('./src/assets/fondo.png')",
+        principal: "url('./src/assets/fondo3.jpg')",
         principal2: "url('./src/assets/fondo2.png')",
         pocion: "url('./src/assets/118ca44e80db5585737cc8028b95806e.jpg')",
-        fondo: "url('./src/assets/833f411a437e960c76483a83dccb653b.jpg')"
+        pocion2: "url('./src/assets/pocion2.0.jpg')",
+        ingredients: "url('./src/assets/ingre.jpg')",
+        fondo: "url('./src/assets/fondoForm.jpg')"
       },
       
       screens: {

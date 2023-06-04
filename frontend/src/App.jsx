@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   return (
-    <div>
+    <div className="bg-principal bg-no-repeat bg-fixed h-full">
         <Landing/>
         
     </div>

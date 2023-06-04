@@ -8,17 +8,17 @@ import Footer from "./Footer";
 function Landing(){
 
     return(
-        <div className="bg-moradoClaro">
-            <Nav/>
+        <div >
 
-            <section className=" flex flex-col justify-center text-center w-full h-[70vh] font-principal text-xl font-bold ">
-                <h1 className="m-5">Encantamientos embotellado, tu dosis de maravillas</h1>
+            <Nav/>
+            <section className="flex flex-col justify-center text-center w-full h-[70vh] font-principal text-xl font-bold ">
+                <h1 className="m-5 text-3xl">Encantamientos embotellado, tu dosis de maravillas</h1>
                 <Modal/>
                 
             </section >
             <div className="border-t border-black m-4"></div>
-            <section className=" flex flex-col justify-center text-center w-full font-principal text-xl font-bold ">
-                <h1>Pociones</h1>
+            <section className=" flex flex-col justify-center items-center text-center w-full font-principal text-xl font-bold ">
+                <h1 className="text-3xl">Pociones</h1>
                 <Potions/>
             </section>
             <div className="border-t border-black m-4"></div>

@@ -18,12 +18,14 @@ function Ingredients(){
         console.error(error);
       });
     return(
-        <div>
+        <div className="flex flex-col items-center mb-9">
             {Ingredients.map((ingredient)=>(
-                <section key={ingredient.id}>
-                    <p key={ingredient.id}>{ingredient.name}</p>
-                    <p key={ingredient.id}>{ingredient.description}</p>
-                    <p key={ingredient.id}>{ingredient.quantify}</p>
+                <section className="bg-fondo text-base text-azul  p-3 w-[80%] mt-6 rounded-lg  text-left" key={ingredient.id}>
+                    <div className="h-full flex flex-col justify-end ">
+                        <p className="p-2 bg-white bg-opacity-30" key={ingredient.id}>{ingredient.name}</p>
+                        <p className="p-2 bg-white bg-opacity-30" key={ingredient.id}>{ingredient.description}</p>
+                        <p className="p-2 bg-white bg-opacity-30" key={ingredient.id}>{ingredient.quantity}</p>
+                    </div>
                 </section>
             ))}
         </div>

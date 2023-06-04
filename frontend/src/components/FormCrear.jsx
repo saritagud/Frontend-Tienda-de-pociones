@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {FaWindowClose} from 'react-icons/fa'
 
 function Modal() {
@@ -6,10 +6,10 @@ function Modal() {
   const [Name, setName] = useState('');
   const [Description, setDescription] = useState('');
   const [Price, setPrice] = useState('');
-  const [Quantify, setQuantify] = useState('');
+  const [Quantity, setQuantity] = useState('');
   const [ingredients, setIngredients] = useState([]);
+  const [ingredientID, setingredientID ] = useState([])
 
-  useEffect(() => {
     fetch("http://localhost:3000/ingredients", {
       method: 'GET',
       headers: {
@@ -20,34 +20,20 @@ function Modal() {
     .then(data => {
       setIngredients(data);
     });
-  }, []);
 
-  const handleIngredientChange = (event, ingredientId) => {
-    const updatedIngredients = ingredients.map((ingredient) => {
-      if (ingredient.id === ingredientId) {
-        return {
-          ...ingredient,
-        };
-      }
-      return ingredient;
-    });
-    setIngredients(updatedIngredients);
-  };
+    const ingredientSelected = (idsIngredient) => {
+      setingredientID([...ingredientID, idsIngredient])
+    }
 
   const submit = (event) => {
     event.preventDefault();
-  
-    const selectedIngredients = ingredients.filter(
-      (ingredient) => ingredient.checked
-    );
-    const ingredientIds = selectedIngredients.map((ingredient) => ingredient.id);
-
+    
     const datosPotion = {
       name: Name,
       description: Description,
       price: Price,
-      quantify: Quantify,
-      ingredients: ingredientIds,
+      quantity: Quantity,
+      ingredients: ingredientID,
     };
 
     fetch("http://localhost:3000/agregar", {
@@ -61,6 +47,8 @@ function Modal() {
       .then((data) => {
         console.log(data);
       });
+
+      
   };
   
   
@@ -71,7 +59,7 @@ function Modal() {
       {isOpen && (
         
         <form className="fixed flex justify-center items-center inset-0 backdrop-blur-sm  bg-black bg-opacity-30 "  onSubmit={submit}>
-        <FaWindowClose onClick={() => setIsOpen(!isOpen)} className="absolute top-16 text-2xl left-36 w-full"/>
+        <FaWindowClose onClick={() => setIsOpen(!isOpen)} className="absolute top-10 text-2xl left-36 w-full"/>
             <div className="bg-fondo rounded-xl m-5 p-6 font-Urbanist w-full text-azul  flex flex-col justify-start items-center text-sm text-[15px]">
             <label className="w-full text-left mb-1">Nombre de la poción</label>
           <input className="rounded-lg p-2 font-normal text-[15px] w-full"
@@ -80,22 +68,26 @@ function Modal() {
             type="text"
           />
 
-          <div  className="mt-3 mb-3 bg-azul text-white  rounded-lg w-full" >
-            {ingredients.map((ingredient) => (
-              <ul key={ingredient.id}>
-                <li className="w-full text-left flex justify-between   p-3" key={ingredient.id}>
-                  {ingredient.name}
-                  <input className="w-5"
+            
+          <ul className="mt-3 mb-3 bg-azul text-white  rounded-lg w-full">
+                {ingredients.map((ingredient) => (
+                  <li
+                    className="w-full text-left flex justify-between p-3"
                     key={ingredient.id}
-                    checked={ingredient.checked}
-                    id={ingredient.id}
-                    type="checkbox"
-                    onChange={(e) => handleIngredientChange(e, ingredient.id)}
-                  />
-                </li>
+                  >
+                    <label htmlFor={ingredient.name}>{ingredient.name}</label>
+                    <input
+                      className="w-5"
+                      key={ingredient.id}
+                      checked={ingredient.checked}
+                      id={ingredient.name}
+                      value={ingredient.name}
+                      type="checkbox"
+                      onClick={() => ingredientSelected(ingredient._id)}
+                    />
+                  </li>
+                ))}
               </ul>
-            ))}
-          </div>
 
           <label className="w-full text-left mb-1">Descripción</label>
           <input className="rounded-lg p-2 font-normal text-[15px] w-full"
@@ -113,8 +105,8 @@ function Modal() {
           />
           <label className="w-full text-left mb-1">Cantidad</label>
           <input className="rounded-lg p-2 font-normal text-[15px] w-full"
-            onChange={(e) => setQuantify(e.target.value.trim())}
-            value={Quantify}
+            onChange={(e) => setQuantity(e.target.value.trim())}
+            value={Quantity}
             type="number"
             id="numero"
             name="numero"
