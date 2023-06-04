@@ -22,7 +22,7 @@ function Eliminar({potionId}) {
 
   return (
     <div>
-      <FaTrash className="text-azul text-2xl" onClick={() => setIsOpen(!isOpen)} />
+      <FaTrash className="text-azul text-2xl cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
 
       {isOpen && (
         <section className="fixed flex justify-center items-center inset-0 backdrop-blur-sm  bg-black bg-opacity-30 ">

@@ -1,15 +1,14 @@
-import Landing from './components/Landing'
+import Landing from "./components/Landing";
 
-import './App.css'
+import "./App.css";
 
 function App() {
-
   return (
-    <div className="bg-principal bg-no-repeat bg-fixed h-full">
-        <Landing/>
-        
+    <div className="bg-principal bg-no-repeat bg-fixed bg-cover h-full w-full">
+      <Landing />
+    
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
