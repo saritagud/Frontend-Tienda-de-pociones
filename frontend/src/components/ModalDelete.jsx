@@ -26,8 +26,8 @@ function Eliminar({potionId}) {
 
       {isOpen && (
         <section className="fixed flex justify-center items-center inset-0 backdrop-blur-sm  bg-black bg-opacity-30 ">
-          <div className="bg-fondo text-center rounded-xl m-5 p-6 font-Urbanist w-full  flex flex-col justify-start items-center text-sm md:w-[60%] md:text-lg">
-            <h1 className="text-[20px] md:text-2xl">¿Está seguro/a de eliminar esta poción?</h1>
+          <div className="bg-fondo bg-cover bg-no-repeat text-center rounded-xl m-5 p-6 font-Urbanist w-full  flex flex-col justify-start items-center text-sm md:w-[60%] md:text-lg lg:text-3xl ">
+            <h1 className="text-[20px] md:text-2xl lg:text-4xl">¿Está seguro/a de eliminar esta poción?</h1>
             <div className="flex">
               <button
                 className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold  flex justify-center mt-10 mr-5"

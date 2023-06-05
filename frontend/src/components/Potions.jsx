@@ -43,13 +43,13 @@ function Potions() {
         type="text"
         placeholder="Buscar pociones"
         onChange={handleSearch}
-        className="m-4 p-2 rounded-lg font-Urbanist sm:text-2xl lg:text-3xl"
+        className="m-4 p-2 rounded-lg font-Urbanist sm:text-2xl lg:text-3xl xl:text-4xl lg:h-20"
       />
 
       <div className="lg:flex lg:flex-wrap  lg:justify-center w-full">
         {filteredPotions.map((potions) => (
           <ul
-            className="rounded-lg bg-pocion2 bg-no-repeat  bg-cover p-4 m-5 text-left h-[50vh] w-[80%] font-Urbanist sm:w-[50%] sm:h-[70vh] md:w-[45%] md:text-2xl lg:w-[40%]"
+            className="rounded-lg bg-pocion2 bg-no-repeat  bg-cover p-4 m-5 text-left h-[50vh] w-[80%] font-Urbanist sm:w-[50%] sm:h-[70vh] md:w-[45%] md:text-2xl lg:w-[40%] xl:text-3xl lg:h-[50vh]"
             key={potions._id}
           >
             <div className="flex justify-end w-full ">
@@ -71,7 +71,7 @@ function Potions() {
                 {potions.description}
               </li>
               <li
-                className="mb-5 bg-white bg-opacity-30 pl-3 p-1"
+                className="mb-5 bg-white bg-opacity-30 pl-3 p-1 lg:mb-10"
                 key={potions._id}
               >
                 {potions.price}
