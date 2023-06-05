@@ -12,21 +12,21 @@ function Landing(){
 
             <Nav/>
             <section className="flex flex-col justify-center text-center w-full h-[70vh] font-principal text-xl font-bold sm:h-[80vh]">
-                <h1 className="m-5 text-3xl sm:text-4xl">Encantamientos embotellado, tu dosis de maravillas</h1>
+                <h1 className="m-5 text-3xl sm:text-4xl lg:text-5xl">Encantamientos embotellado, tu dosis de maravillas</h1>
                 <Modal/>
             </section>
 
-            <div className="border-t border-azul m-4"></div>
+            <div className="border-t border-azul m-4 lg:mr-14 lg:ml-14"></div>
 
             <section className=" flex flex-col justify-center items-center text-center w-full font-principal text-xl font-bold ">
-                <h1 className="text-3xl sm:text-5xl mt-10">Pociones</h1>
+                <h1 className="text-3xl sm:text-5xl mt-10 mb-6 lg:text-6xl">Pociones</h1>
                 <Potions />
             </section>
 
-            <div className="border-t border-azul m-4"></div>
+            <div className="border-t border-azul m-4 lg:mr-14 lg:ml-14"></div>
 
             <section className=" flex flex-col justify-center text-center w-full  font-principal text-xl font-bold ">
-                <h1 className="text-3xl sm:text-4xl mt-10">Lista de Ingredientes</h1>
+                <h1 className="text-3xl sm:text-4xl mt-10 mb-6 lg:text-5xl">Lista de Ingredientes</h1>
                 <Ingredients />
             </section>
 

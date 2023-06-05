@@ -91,7 +91,7 @@ function Modal() {
   return (
     <div>
       <button
-        className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold m-5 cursor-pointer sm:text-2xl"
+        className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold m-5 cursor-pointer sm:text-2xl lg:text-4xl"
         onClick={() => setIsOpen(!isOpen)}
       >
         Crear Poción
@@ -102,10 +102,10 @@ function Modal() {
           className="fixed flex justify-center items-center inset-0 backdrop-blur-sm  bg-black bg-opacity-30 "
           onSubmit={submit}
         >
-          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul  flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px]">
+          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul  flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px] lg:w-[60%] lg:text-[25px]">
             <div className="flex justify-end mb-3 w-full sm:mb-0">
               <FaWindowClose
-                className=" text-2xl cursor-pointer"
+                className=" text-2xl cursor-pointer lg:text-4xl"
                 onClick={() => setIsOpen(false)}
               />
             </div>

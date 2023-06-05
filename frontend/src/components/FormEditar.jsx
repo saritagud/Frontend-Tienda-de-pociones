@@ -103,7 +103,7 @@ function Editar({ potionId }) {
   return (
     <div>
       <FaPencilAlt
-        className="text-azul text-2xl mr-2 cursor-pointer"
+        className="text-azul text-2xl mr-2 cursor-pointer lg:text-4xl"
         onClick={() => setIsOpen(true)}
       />
 
@@ -112,16 +112,16 @@ function Editar({ potionId }) {
           className="fixed flex justify-center items-center inset-0 backdrop-blur-sm bg-black bg-opacity-30"
           onSubmit={submit}
         >
-          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px]">
+          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px] lg:w-[60%] lg:text-[25px]">
           <div className="flex justify-end mb-3 w-full">
               <FaWindowClose
-                className=" text-2xl cursor-pointer"
+                className=" text-2xl cursor-pointer lg:text-3xl"
                 onClick={() => setIsOpen(false)}
               />
             </div>
-            <label className="w-full text-left mb-1">Nombre de la poción</label>
+            <label className="w-full text-left mb-1 ">Nombre de la poción</label>
             <input
-              className="rounded-lg p-2 font-normal text-[15px] w-full"
+              className="rounded-lg p-2 font-normal text-[15px] w-full lg:tex"
               onChange={(e) => setName(e.target.value.trim())}
               value={Name}
               type="text"
