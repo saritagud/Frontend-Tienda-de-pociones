@@ -112,7 +112,7 @@ function Editar({ potionId }) {
           className="fixed flex justify-center items-center inset-0 backdrop-blur-sm bg-black bg-opacity-30"
           onSubmit={submit}
         >
-          <div className="bg-fondo rounded-xl m-5 p-6 font-Urbanist w-full text-azul flex flex-col justify-start items-center text-sm text-[15px] sm:text-lg">
+          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px]">
           <div className="flex justify-end mb-3 w-full">
               <FaWindowClose
                 className=" text-2xl cursor-pointer"

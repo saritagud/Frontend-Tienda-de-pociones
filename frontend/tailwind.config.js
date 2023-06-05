@@ -19,7 +19,7 @@ module.exports = {
         principal: "url('./src/assets/fondo3.jpg')",
         principal2: "url('./src/assets/fondo2.png')",
         pocion: "url('./src/assets/118ca44e80db5585737cc8028b95806e.jpg')",
-        pocion2: "url('./src/assets/pocion2.0.jpg')",
+        pocion2: "url('./src/assets/pocion2.jpg')",
         ingredients: "url('./src/assets/ingre.jpg')",
         fondo: "url('./src/assets/fondoForm.jpg')"
       },

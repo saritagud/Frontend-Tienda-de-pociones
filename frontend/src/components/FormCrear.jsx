@@ -91,7 +91,7 @@ function Modal() {
   return (
     <div>
       <button
-        className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold m-5 cursor-pointer"
+        className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold m-5 cursor-pointer sm:text-2xl"
         onClick={() => setIsOpen(!isOpen)}
       >
         Crear Poción
@@ -102,14 +102,14 @@ function Modal() {
           className="fixed flex justify-center items-center inset-0 backdrop-blur-sm  bg-black bg-opacity-30 "
           onSubmit={submit}
         >
-          <div className="bg-fondo rounded-xl m-5 p-6 font-Urbanist w-full text-azul  flex flex-col justify-start items-center text-sm text-[15px] sm:text-[20px] sm:w-[80%]">
-            <div className="flex justify-end mb-3 w-full">
+          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul  flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px]">
+            <div className="flex justify-end mb-3 w-full sm:mb-0">
               <FaWindowClose
                 className=" text-2xl cursor-pointer"
                 onClick={() => setIsOpen(false)}
               />
             </div>
-            <label className="w-full text-left mb-2">Nombre de la poción</label>
+            <label className="w-full text-left mb-1">Nombre de la poción</label>
             <input
               className="rounded-lg p-2 font-normal text-[15px] w-full"
               onChange={(e) => setName(e.target.value.trim())}
@@ -137,14 +137,14 @@ function Modal() {
               ))}
             </ul>
 
-            <label className="w-full text-left mb-2 ">Descripción</label>
+            <label className="w-full text-left mb-1 ">Descripción</label>
             <input
               className="rounded-lg p-2 font-normal text-[15px] w-full"
               onChange={(e) => setDescription(e.target.value.trim())}
               value={Description}
               type="text"
             />
-            <label className="w-full text-left mb-2 mt-2">Precio</label>
+            <label className="w-full text-left mb-1 mt-2">Precio</label>
             <input
               className="rounded-lg p-2 font-normal text-[15px] w-full"
               onChange={(e) => setPrice(e.target.value.trim())}
@@ -153,7 +153,7 @@ function Modal() {
               id="numero"
               name="numero"
             />
-            <label className="w-full text-left mb-2 mt-2">Cantidad</label>
+            <label className="w-full text-left mb-1 mt-2">Cantidad</label>
             <input
               className="rounded-lg p-2 font-normal text-[15px] w-full"
               onChange={(e) => setQuantity(e.target.value.trim())}

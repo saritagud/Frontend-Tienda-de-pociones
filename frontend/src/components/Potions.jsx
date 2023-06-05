@@ -38,11 +38,11 @@ function Potions() {
   };
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center md:flex md:flex-grow">
 
-      <input type="text" placeholder="Buscar pociones" onChange={handleSearch} className="m-4 p-2 rounded-lg font-Urbanist" />
+      <input type="text" placeholder="Buscar pociones" onChange={handleSearch} className="m-4 p-2 rounded-lg font-Urbanist sm:text-2xl" />
       {filteredPotions.map((potions) => (
-        <ul className="rounded-lg bg-pocion2 p-4 m-5 text-left h-[50vh] w-[80%] font-Urbanist sm:w-[50%] sm:h-[70vh]" key={potions._id}>
+        <ul className="rounded-lg bg-pocion2 bg-no-repeat  bg-cover p-4 m-5 text-left h-[50vh] w-[80%] font-Urbanist sm:w-[50%] sm:h-[70vh] md:w-[45%] md:text-2xl" key={potions._id}>
           <div className="flex justify-end w-full ">
             <Editar potionId={potions._id} />
             <Eliminar potionId={potions._id} />
