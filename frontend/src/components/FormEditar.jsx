@@ -112,16 +112,16 @@ function Editar({ potionId }) {
           className="fixed flex justify-center items-center inset-0 backdrop-blur-sm bg-black bg-opacity-30"
           onSubmit={submit}
         >
-          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px] lg:w-[60%] lg:text-[25px] xl:text-4xl">
-          <div className="flex justify-end mb-3 w-full">
+          <div className="bg-fondo bg-cover bg-no-repeat rounded-xl m-5 p-6 font-Urbanist w-full text-azul flex flex-col justify-start items-center text-sm text-[15px] sm:w-[80%] sm:text-[20px] lg:w-[60%] lg:text-[25px] lg:h-">
+          <div className="flex justify-end mb-3 w-full ">
               <FaWindowClose
-                className=" text-2xl cursor-pointer lg:text-3xl xl:text-5xl"
+                className=" text-2xl cursor-pointer lg:text-3xl xl:text-3xl"
                 onClick={() => setIsOpen(false)}
               />
             </div>
             <label className="w-full text-left mb-1 ">Nombre de la poción</label>
             <input
-              className="rounded-lg p-2 font-normal text-[15px] w-full  lg:text-4xl lg:h-16"
+              className="rounded-lg p-2 font-normal text-[15px] w-full  "
               onChange={(e) => setName(e.target.value.trim())}
               value={Name}
               type="text"
@@ -149,14 +149,14 @@ function Editar({ potionId }) {
 
             <label className="w-full text-left mb-1">Descripción</label>
             <input
-              className="rounded-lg p-2 font-normal text-[15px] w-full lg:text-4xl lg:h-16"
+              className="rounded-lg p-2 font-normal text-[15px] w-full "
               onChange={(e) => setDescription(e.target.value.trim())}
               value={Description}
               type="text"
             />
             <label className="w-full text-left mb-1">Precio</label>
             <input
-              className="rounded-lg p-2 font-normal text-[15px] w-full lg:text-4xl lg:h-16"
+              className="rounded-lg p-2 font-normal text-[15px] w-full "
               onChange={(e) => setPrice(e.target.value.trim())}
               value={Price}
               type="number"
@@ -165,7 +165,7 @@ function Editar({ potionId }) {
             />
             <label className="w-full text-left mb-1">Cantidad</label>
             <input
-              className="rounded-lg p-2 font-normal text-[15px] w-full lg:text-4xl lg:h-16"
+              className="rounded-lg p-2 font-normal text-[15px] w-full "
               onChange={(e) => setQuantity(e.target.value.trim())}
               value={Quantity}
               type="number"
@@ -173,7 +173,7 @@ function Editar({ potionId }) {
               name="numero"
             />
 
-            <button className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold w-[50%] flex justify-center m-5 lg:p-4 lg:w-[40%s]">
+            <button className="bg-azul p-3 rounded-md text-white font-Urbanist font-semibold w-[50%] flex justify-center m-5 lg:p-4 lg:w-[30%s]">
               Guardar
             </button>
           </div>
